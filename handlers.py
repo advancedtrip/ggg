@@ -2,7 +2,7 @@
 
 
 def home(request, response):
-    response.text = f"<p></p>"
+    response.text = f""
 
 def about(request, response):
     response.text = f"Привет, ты запросил about"
