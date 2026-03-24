@@ -1,9 +1,11 @@
 from controllers.site_controller import SiteController
-
-site_controller = SiteController()
+from controllers.test_controller import TestController
 
 routes = {
-    '/home': site_controller.index,
-    '/about': site_controller.about,
+    '/home': [SiteController, SiteController.index],
+    '/about': [SiteController, SiteController.about],
+    '/test-action': [TestController, TestController.test_action],
+    '/test': [TestController, TestController.test],
+
     # '/articles': articles,
 }
